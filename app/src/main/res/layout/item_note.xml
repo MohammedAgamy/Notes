@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:elevation="10dp"
+		app:cardCornerRadius="15dp"
+		app:cardElevation="10dp"
+		android:layout_marginHorizontal="10dp"
+		android:layout_marginTop="5dp"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent">
+
+	<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+				  android:padding="10dp"
+				  android:orientation="vertical">
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+				  android:id="@+id/title"
+				  android:textSize="30dp"
+				  android:text="Titel"
+				  android:textStyle="bold"
+				  android:textColor="@color/black"/>
+
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+				  android:id="@+id/note"
+				  android:textSize="25dp"
+				  android:text="Titel"
+				  android:textColor="@color/black"/>
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+				  android:id="@+id/date"
+				  android:textSize="20dp"
+				  android:text="Titel"
+				  android:textColor="@color/black"/>
+	</LinearLayout>
+</androidx.cardview.widget.CardView>
