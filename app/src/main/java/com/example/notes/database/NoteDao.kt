@@ -6,17 +6,19 @@ import com.example.notes.models.NoteEntityModel
 
 @Dao
 interface NoteDao {
-
-
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(noteEntityModel: NoteEntityModel)
+    @Update
+    suspend fun update(noteEntityModel: NoteEntityModel)
 
     @Delete
     suspend fun delete(noteEntityModel: NoteEntityModel)
 
-    @Query("UPDATE notes_table SET title= :title, note=:note WHERE id = :id")
-    suspend fun update(id: Int?, title: String?, note: String?)
 
-    @Query("select * from notes_table order by id ASC")
-    fun getAllNote(): LiveData<List<NoteEntityModel>>
+    @Query("select * from notes_table order by id desc")
+     fun getAllNotes():LiveData<List<NoteEntityModel>>
+
+
+    @Query("select * from notes_table where title like :query Or note like:query")
+     fun search(query:String?): LiveData<List<NoteEntityModel>>
 }
