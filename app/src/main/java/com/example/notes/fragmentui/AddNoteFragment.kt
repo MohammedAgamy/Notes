@@ -44,6 +44,7 @@ class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
     }
 
 
+    //tack data from user and save in data base
     fun saveData(view:View)
     {
         val title = binding.addNoteTitle.text.toString().trim()
@@ -54,21 +55,24 @@ class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
             val note= NoteEntityModel(0,title, note )
             noteViewModel.addNote(note)
             view.findNavController().popBackStack(R.id.homeFragment,false)
-            Toast.makeText(noteView.context, "Note  Saved",Toast.LENGTH_SHORT).show()
+            Toast.makeText(noteView.context, getString(R.string.note_saved),Toast.LENGTH_SHORT).show()
 
         }
 
         else{
-            Toast.makeText(noteView.context, "Note Not Saved",Toast.LENGTH_SHORT).show()
+            Toast.makeText(noteView.context, getString(R.string.note_not_saved),Toast.LENGTH_SHORT).show()
         }
     }
 
+
+
+    //overRid menu save creation
     override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
        menu.clear()
         menuInflater.inflate(R.menu.menu_add_note, menu)
 
     }
-
+    //overRid menu save click
     override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
         return when (menuItem.itemId)
         {

@@ -10,9 +10,11 @@ import kotlin.synchronized as synchronized1
 
 @Database(entities =[NoteEntityModel::class], version = 1)
 abstract class NoteDataBase :RoomDatabase(){
-
+// creation Room DataBase
     abstract fun getNoteDao():NoteDao
 
+
+    // singleTon pattern to creation one Of instance dataBase in our project
     companion object{
         @Volatile
         private var INSTANCE:NoteDataBase?=null
@@ -25,6 +27,7 @@ abstract class NoteDataBase :RoomDatabase(){
                    INSTANCE = it
                }
             }
+
 
         private fun createDataBase(context: Context) =
             Room.databaseBuilder(context.applicationContext,NoteDataBase::class.java,"NoteDataBase").build()

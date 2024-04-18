@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 import java.io.Serializable
 
+//create model entity table to store data
 @Entity(tableName = "notes_table")
 @Parcelize
 data class NoteEntityModel(

@@ -14,9 +14,6 @@ import com.example.notes.models.NoteEntityModel
 
 class AdapterNote :RecyclerView.Adapter<AdapterNote.MyViewHolder>() {
 
-    /*   val noteList = ArrayList<NoteEntityModel>()
-    val fullList = ArrayList<NoteEntityModel>()
-*/
 
     class MyViewHolder(val itemBinding: NoteLayoutBinding) : RecyclerView.ViewHolder(itemBinding.root)
         val differCallback = object : DiffUtil.ItemCallback<NoteEntityModel>() {
@@ -30,6 +27,7 @@ class AdapterNote :RecyclerView.Adapter<AdapterNote.MyViewHolder>() {
             }
         }
 
+    //There are several ways to compare and identify differences between data in Kotlin
         val differ =AsyncListDiffer(this,differCallback)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(

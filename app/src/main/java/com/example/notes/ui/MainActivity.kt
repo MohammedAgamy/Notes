@@ -24,6 +24,8 @@ lateinit var noteViewModel:NoteViewModel
 
     fun  setUpViewModel()
     {
+        //handler view model to start data
+        //dataBase to crate room dataBAse
         val noteRepository =NoteRepository(NoteDataBase(this))
         val viewModelF =NoteViewModelFactory(application,noteRepository)
         noteViewModel =ViewModelProvider(this,viewModelF)[NoteViewModel::class.java]

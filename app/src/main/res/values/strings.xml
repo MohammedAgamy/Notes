@@ -2,4 +2,19 @@
 	<string name="app_name">Notes</string>
 	<!-- TODO: Remove or change this placeholder text -->
 	<string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="add_note">Add Note.</string>
+	<string name="enter_the_title">Enter the title</string>
+	<string name="enter_the_description">Enter the description</string>
+	<string name="edit_note">Edit Note.</string>
+	<string name="search">Search</string>
+	<string name="save">Save</string>
+	<string name="delete">Delete</string>
+	<string name="note_saved">Note Saved</string>
+	<string name="note_not_saved">Note Not Saved</string>
+	<string name="deletenote">DeleteNote</string>
+	<string name="do_you_need_this_note">Do You need This Note</string>
+	<string name="note_deleted">Note Deleted</string>
+	<string name="cancel">Cancel</string>
+	<string name="darkmode">DarkMode</string>
+	<string name="light_mode">Light_mode</string>
 </resources>

@@ -4,8 +4,7 @@ import androidx.lifecycle.LiveData
 import com.example.notes.models.NoteEntityModel
 
 class NoteRepository(private val dao: NoteDataBase) {
-    //al allNote:List<NoteEntityModel> =dao.getAllNote()
-
+    // repository is a mediator between viewModel and dao interface
     suspend fun insert(noteEntityModel: NoteEntityModel) {
         dao.getNoteDao().insert(noteEntityModel)
     }

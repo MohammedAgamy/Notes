@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="add_note">اضافة ملاحظه.</string>
+	<string name="enter_the_title">ادخل العنوان</string>
+	<string name="enter_the_description">ادخل الوصف</string>
+	<string name="edit_note">تعديل ملاحظه.</string>
+	<string name="search">بحث</string>
+	<string name="save">حفظ</string>
+	<string name="delete">مسح</string>
+	<string name="note_saved">تم الحفظ</string>
+	<string name="note_not_saved">لم يتم الحفظ</string>
+	<string name="deletenote">مسح ملاحظه</string>
+	<string name="do_you_need_this_note">هل تريد مسح الملاحظه</string>
+	<string name="note_deleted">تم المسح</string>
+	<string name="cancel">الغاء</string>
+</resources>

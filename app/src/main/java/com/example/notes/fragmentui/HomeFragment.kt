@@ -2,6 +2,7 @@ package com.example.notes.fragmentui
 
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.core.view.MenuHost
@@ -21,7 +22,6 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
 
     private var homeBinding: FragmentHomeBinding? = null
     private val binding get() = homeBinding!!
-
     private lateinit var noteViewModel: NoteViewModel
     private lateinit var noteAdapter: AdapterNote
 
@@ -37,17 +37,24 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //manage options menus within fragments.
         val manuHost: MenuHost = requireActivity()
         manuHost.addMenuProvider(this, viewLifecycleOwner,Lifecycle.State.RESUMED)
 
         noteViewModel = (activity as MainActivity).noteViewModel
         setUpHomeRecycler()
         binding.addNoteFab.setOnClickListener {
+            //go to addFragment
             it.findNavController().navigate(R.id.action_homeFragment_to_addNoteFragment)
         }
 
     }
 
+
+        fun swatchMode()
+        {
+            binding
+        }
 
     //visible ui
     fun updateUi(noteEntityModel: List<NoteEntityModel>?) {
@@ -62,6 +69,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
         }
     }
 
+        // create recycler view and set data to ui from dataBase
     fun setUpHomeRecycler() {
         noteAdapter = AdapterNote()
         binding.homeRecyclerView.apply {
@@ -79,11 +87,13 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
     }
 
 
-    fun searchNote(query:String?)
+        // word query from user to search in note
+   private fun searchNote(query:String?)
     {
         val searchQuery ="%$query"
-        noteViewModel.search(searchQuery).observe(viewLifecycleOwner){list->
+        noteViewModel.search(searchQuery).observe(this){list->
             noteAdapter.differ.submitList(list)
+
         }
     }
 
@@ -99,10 +109,6 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
 
     }
 
-        override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-           return false
-        }
-
         override fun onQueryTextSubmit(query: String?): Boolean {
             return false
         }
@@ -114,10 +120,19 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
             }
             return true
         }
+        override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+            createMode()
+            return true
+        }
 
         override fun onDestroy() {
             super.onDestroy()
             homeBinding =null
+        }
+
+        fun createMode()
+        {
+
         }
 
     }

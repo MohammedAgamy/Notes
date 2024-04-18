@@ -6,6 +6,7 @@ import com.example.notes.models.NoteEntityModel
 
 @Dao
 interface NoteDao {
+    // dao to used create operation in database like insert update delete
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(noteEntityModel: NoteEntityModel)
     @Update

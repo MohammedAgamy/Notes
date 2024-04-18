@@ -73,8 +73,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
     // Annotation processor
     ksp("androidx.lifecycle:lifecycle-compiler:$lifecycleVersion")
-
-
-    val lottieVersion = "6.4.0"
+    //lottieAnimation
+    val lottieVersion = "3.4.0"
     implementation( "com.airbnb.android:lottie:$lottieVersion")
 }
