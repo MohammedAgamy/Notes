@@ -22,12 +22,12 @@ LinkedIn (https://www.linkedin.com/in/mohamed-agamy-732418173/)"](https://www.li
 
 ### Images
 
-Image:
+
 <p align="center">
-<img src="https://github.com/MohammedAgamy/imagenoteone/blob/main/Screenshot_2024-04-19-19-29-56-068_com.example.notes.jpg" width="250">
-<img src="https://github.com/MohammedAgamy/imagenoteone/blob/main/Screenshot_2024-04-19-19-29-12-860_com.example.notes.jpg" width="250">
-<img src="https://github.com/MohammedAgamy/imagenoteone/blob/main/Screenshot_2024-04-19-19-29-31-047_com.example.notes.jpg" width="250">
-<img src="https://github.com/MohammedAgamy/imagenoteone/blob/main/Screenshot_2024-04-19-19-29-31-047_com.example.notes.jpg" width="250">
+<img src="https://github.com/MohammedAgamy/imagenoteone/blob/main/Screenshot_2024-04-19-19-29-56-068_com.example.notes.jpg" title="Splash" width="250">
+<img src="https://github.com/MohammedAgamy/imagenoteone/blob/main/Screenshot_2024-04-19-19-29-12-860_com.example.notes.jpg" title="Home" width="250">
+<img src="https://github.com/MohammedAgamy/imagenoteone/blob/main/Screenshot_2024-04-19-19-29-31-047_com.example.notes.jpg" title="AddNote" width="250">
+<img src="https://github.com/MohammedAgamy/imagenoteone/blob/main/Screenshot_2024-04-19-19-29-31-047_com.example.notes.jpg" title="EditeNote" width="250">
 </p>
 <h3 align="left">Languages and Tools:</h3>
 
