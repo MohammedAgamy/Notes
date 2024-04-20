@@ -13,6 +13,7 @@ Definition Of Notes Application
 - Lottie animations
 - JetPack Navigation
 - Change Mode
+- Data Binding 
 
 
 ### Links
