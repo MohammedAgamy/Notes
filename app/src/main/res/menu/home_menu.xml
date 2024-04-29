@@ -10,8 +10,9 @@
 			app:actionViewClass="androidx.appcompat.widget.SearchView" />
 
 	<item
+			android:id="@+id/sweatchbtn"
 			android:title="Switch"
 			app:actionViewClass="android.widget.Switch"
-			app:showAsAction="always" />
+			app:showAsAction="ifRoom" />
 
 </menu>

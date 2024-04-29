@@ -18,17 +18,33 @@
 				android:text="@string/add_note"
 				android:textStyle="bold"
 				android:textSize="24sp" />
-		<EditText
-				android:id="@+id/addNoteTitle"
+
+		<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/textField"
 				android:layout_width="match_parent"
-				android:layout_height="60dp"
+				android:layout_height="wrap_content"
 				android:hint="@string/enter_the_title"
+				android:layout_marginTop="10dp"
+				app:endIconMode="clear_text"
+				app:counterEnabled="true"
+				app:counterMaxLength="35"
+				app:errorEnabled="true"
 				android:padding="12dp"
 				android:textSize="20sp"
 				android:layout_below="@id/addNoteHeading"
-				android:layout_marginTop="16dp"
-				android:maxLines="1"
+				android:layout_marginHorizontal="15dp"
+				style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+			>
+
+			<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/addNoteTitle"
+					android:layout_width="match_parent"
+					android:layout_height="60dp"
+
 			/>
+		</com.google.android.material.textfield.TextInputLayout>
+
+
 		<EditText
 				android:id="@+id/addNoteDesc"
 				android:layout_width="match_parent"
@@ -37,7 +53,7 @@
 				android:gravity="top"
 				android:padding="12dp"
 				android:textSize="18sp"
-				android:layout_below="@id/addNoteTitle"
+				android:layout_below="@id/textField"
 				android:layout_marginTop="12dp" />
 	</RelativeLayout>
 </layout>

@@ -42,7 +42,7 @@ class EditNoteFragment  : Fragment(R.layout.fragment_edit_note) , MenuProvider{
         manuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
         noteViewModel = (activity as MainActivity).noteViewModel
 
-        entitynoteFragment = args.note!!
+        entitynoteFragment = args.note!! //????????????????????????????????????????
         //set text from data base
         binding.editNoteTitle.setText(entitynoteFragment.title)
         binding.editNoteDesc.setText(entitynoteFragment.note)
